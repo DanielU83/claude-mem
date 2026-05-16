@@ -42,7 +42,10 @@ A hand-maintained replacement for a memory tool. Drop this file (or its contents
 
 _Add learnings here as they come up. Examples below — replace with real ones._
 
-- `gstack` (YC's CEO's stack tool): _TBD — verify what it is and whether it has the same "must run locally" constraint as claude-mem._
+- **`gstack`** (github.com/garrytan/gstack — Garry Tan's AI coding toolkit): 23 skills + 8 power tools for Claude Code that emulate roles (CEO, eng manager, QA, security, release). Workflow: Think → Plan → Build → Review → Test → Ship → Reflect.
+  - **Same local-only constraint as claude-mem.** Installs via `git clone + bash`, requires Bun ≥1.0, stores state in `~/.gstack/` (analytics JSONL, project learnings). No cloud mode.
+  - **In a web-only setup:** would need a persistent dev VM/Codespace to be useful. Otherwise `~/.gstack/` resets every session and skills lose their learned context.
+  - **Cheap experiment:** the *skills themselves* are just markdown/scripts in the repo — could clone the repo into a web session and invoke skills ad-hoc without the persistent-state layer. Worth trying before committing to a VM.
 - _Tool X: gotcha Y — workaround Z._
 
 ## When updating this file
